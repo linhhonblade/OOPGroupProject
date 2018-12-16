@@ -1,4 +1,4 @@
-package bin.connectJDBC;
+package Dictionary.bin.connectJDBC;
 
 import java.sql.*;
 //import com.mysql.jdbc.*;
@@ -11,7 +11,7 @@ class connectJDBC{
         try{
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Connecting to database ...");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels?autoReconnect=true&useSSL=false"");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels?autoReconnect=true&useSSL=false","foo","MysqlFooUser1.");
             System.out.println("Creating statement...");
             state=con.createStatement();
             ResultSet rs=state.executeQuery("select * from employees;");
