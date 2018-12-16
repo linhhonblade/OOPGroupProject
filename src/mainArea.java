@@ -4,26 +4,24 @@ import javax.swing.*;
 import java.awt.*;
 
 public class mainArea extends JPanel{
-    protected JLabel Search=null;
-    protected JLabel textDiscription=null;
+    protected JPanel Search=null;
+    protected JTextArea textDiscription=null;
 
     //constructor
-    public mainArea(){
+    public mainArea(){       
         //construct layout as BorderLayout
         super(new BorderLayout());
+    }
 
-        //search area setting
-        Search=new JLabel("Search area",JLabel.CENTER);
-        Search.setBackground(Color.blue);
-        Search.setOpaque(true);
-
-        //text discription area setting
-        textDiscription=new JLabel("Discription area",JLabel.CENTER);
-        textDiscription.setBackground(Color.yellow);
-        textDiscription.setOpaque(true);
-
-        //add components to panel
+    // add search area
+    public void setSearchArea(JPanel Search){
         add(Search,BorderLayout.NORTH);
+        this.Search=Search;
+    }
+
+    //add discription area
+    public void setDiscription(JTextArea textDiscription){
         add(textDiscription,BorderLayout.CENTER);
+        this.textDiscription=textDiscription;
     }
 }
