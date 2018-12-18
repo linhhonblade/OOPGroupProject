@@ -1,4 +1,4 @@
-package Dic;
+package Dictionary.bin.GUI;
 
 import javax.swing.*;
 import java.awt.*;

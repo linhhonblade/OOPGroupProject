@@ -1,4 +1,4 @@
-package Dictionary.bin.connectJDBC;
+package Dictionary.Test.bin.Connecter;
 
 import java.sql.*;
 //import com.mysql.jdbc.*;

@@ -1,4 +1,4 @@
-package Dictionary.bin.Interface.Componnet;
+package Dictionary.Test.bin.Interface.Componnet;
 
 import javax.swing.*;
 import java.awt.*;

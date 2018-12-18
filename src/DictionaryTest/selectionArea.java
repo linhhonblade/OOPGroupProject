@@ -1,4 +1,4 @@
-package Dictionary.bin.Interface;
+package Dictionary.Test.bin.Interface;
 
 import javax.swing.*;
 import java.awt.*;
