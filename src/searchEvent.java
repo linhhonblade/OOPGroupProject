@@ -3,7 +3,6 @@ package Dictionary.bin.Event;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.*;
 import java.sql.*;
 
 import Dictionary.bin.Connector.*;

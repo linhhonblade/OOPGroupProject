@@ -3,7 +3,6 @@ package Dictionary.bin.Event;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.*;
 import java.sql.*;
 
 import Dictionary.bin.Connector.*;
@@ -15,6 +14,12 @@ public class deleteEvent extends Event implements ActionListener{
 
     //@overwrite
     public void actionPerformed(ActionEvent ae){
+
+        //check allowed case can delete
+        if(jtxinput.getText().length()<1||jtxout.getText().length()<1){
+            return;
+        }
+
         try{
             Data.deleteWord(jtxinput.getText());
         }catch(SQLException e){

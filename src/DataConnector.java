@@ -4,9 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class DataConnector {
-    private String user="foo";
-    private String pass="MysqlFooUser1.";
-
     private String Url = "jdbc:mysql://localhost/OOP?autoReconnect=true&useSSL=false&useUnicode=true";
     private Connection connect;
     //private Statement statement = null;
@@ -15,7 +12,7 @@ public class DataConnector {
 
     public DataConnector() throws Exception {
             Class.forName("com.mysql.jdbc.Driver");
-            connect = DriverManager.getConnection(Url,user,pass);
+            connect = DriverManager.getConnection(Url,"foo","MysqlFooUser1.");
             if(connect!=null){
                 System.out.println("Connected with mySQL...");
             }
