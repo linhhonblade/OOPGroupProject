@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class DataConnector {
-    private String Url = "jdbc:mysql://localhost/OOP?autoReconnect=true&useSSL=false&useUnicode=true";
+    private String Url = "jdbc:mysql://localhost/OOP?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8";
     private Connection connect;
     //private Statement statement = null;
     private PreparedStatement preparedStatement = null;
@@ -12,7 +12,7 @@ public class DataConnector {
 
     public DataConnector() throws Exception {
             Class.forName("com.mysql.jdbc.Driver");
-            connect = DriverManager.getConnection(Url,"foo","MysqlFooUser1.");
+            connect = DriverManager.getConnection(Url,"root","zxcvbnm,./");
             if(connect!=null){
                 System.out.println("Connected with mySQL...");
             }
@@ -43,6 +43,7 @@ public class DataConnector {
             while (resultSet.next()) {
                 String word = resultSet.getString("word");
                 SuggestList[i++] = word;
+                if(i>=5) break;
             }
         }
         return SuggestList;

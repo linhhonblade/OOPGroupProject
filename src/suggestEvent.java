@@ -19,6 +19,7 @@ public class suggestEvent extends Event implements DocumentListener{
         //add function to components
         try{
             String[] wordsList=Data.getSuggestList(jtxinput.getText());
+
             for(String a:wordsList){
                 if(a==null) break;
                 jtxout.append(a+"\n");

@@ -98,6 +98,7 @@ public class Dic extends JFrame {
         //jtxout.setRows(5);set số dòng mặc định, nếu hơn chiều cao thì thanh cuộn dọc sẽ xuất hiện mặc dù không có text
         jtxsuggest.setWrapStyleWord(true);//thiết lập khi hết dòng sẽ ngắt từ, không phải ngắt ký tự như chỉ dùng setLineWrap(true);
         jtxsuggest.setEnabled(false);//khong cho chinh sua
+
         JScrollPane sp2 = new JScrollPane(jtxsuggest);
         jtxsuggest.setFont(f1);
 
@@ -111,6 +112,7 @@ public class Dic extends JFrame {
         jtxbot.setEnabled(false);
         JScrollPane sp4 = new JScrollPane(jtxbot);
         jtxbot.setFont(f1);
+        jtxbot.setForeground(Color.black);
 
         addword.setFont(f2);
         addword.setForeground(Color.white);
